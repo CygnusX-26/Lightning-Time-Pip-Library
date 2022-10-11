@@ -104,6 +104,10 @@ class LightningTime:
 
         timeString = TimeString(bolts, zaps, sparks, milliSparks)
         return timeString
+
+    @staticmethod
+    def epochToLightningTime(epoch: int) -> str:
+        return LightningTime.toLightningTime(datetime.fromtimestamp(epoch))
     
 
 
